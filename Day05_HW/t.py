@@ -8,6 +8,7 @@ def inp_a():
     global a
     a = int(input("Please enter the new value for A ").strip())
 
+
 def inp_b():
     global b
     b = int(input("Please enter the new value for A ").strip())

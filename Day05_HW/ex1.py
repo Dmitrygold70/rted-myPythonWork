@@ -18,6 +18,7 @@ def set_int(prompt: str):
 
 
 a, b = 0, 0
+file = 'data.txt'
 menu_d = {'a': 'a) Set a new Value for A',
           'b': 'b) Set a new Value for B',
           'c': 'c) Save to File',
@@ -39,12 +40,12 @@ if __name__ == '__main__':
             b = set_int("Please enter the new value for B ")
 
         elif choice.find('c') != -1:
-            with open('data.txt', 'w') as infile:
+            with open(file, 'w') as infile:
                 infile.write(f'A = {a}\n')
                 infile.write(f'B = {b}\n')
 
         elif choice.find('d') != -1:
-            with open('data.txt', 'r') as fromfile:
+            with open(file, 'r') as fromfile:
                 lines = fromfile.readlines()
                 for line in lines:
                     if line != '':
@@ -58,5 +59,3 @@ if __name__ == '__main__':
             break
         elif choice == 'p':
             print(f'A = {a}; B = {b}')
-
-

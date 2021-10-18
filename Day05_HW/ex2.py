@@ -5,16 +5,14 @@ b) when the program starts, it load the file if it exists
 c) add exceptions later (after we learn about them in the next lessons)
 """
 import os
-import struct
 
 from Day05_HW import ex1
 
 
 def get_from_file(infile):
-    # TODO fix HERE
-    with open(file, 'rb') as fromfile:
-        n1 = int(fromfile.read(2), 16)
-        n2 = fromfile.read(2)
+    with open(infile, 'rb') as fromfile:
+        n1 = int.from_bytes(fromfile.read(4))
+        n2 = int.from_bytes(fromfile.read(4))
     return n1, n2
 
 
@@ -39,10 +37,9 @@ if __name__ == '__main__':
             b = ex1.set_int("Please enter the new value for B ")
 
         elif choice == 'c':
-            # TODO fix here
             with open(infile, 'wb') as infile:
-                infile.write(struct.pack('b', a))
-                infile.write(struct.pack('b', b))
+                infile.write(a.to_bytes(4, byteorder='big', signed=True))
+                infile.write(b.to_bytes(4, byteorder='big', signed=True))
 
         elif choice == 'd':
             get_from_file(infile)

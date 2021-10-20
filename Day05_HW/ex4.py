@@ -24,7 +24,7 @@ if __name__ == '__main__':
         if os.path.normpath(bin_file):
             with open(bin_file, 'wb') as bf:
                 for n in nums:
-                    bf.write(n.to_bytes(4, byteorder='big', signed=True))
+                    bf.write(n.to_bytes(4, byteorder='big'))
 
         with open(bin_file, 'rb') as bf:
             read_int = bf.read(4)

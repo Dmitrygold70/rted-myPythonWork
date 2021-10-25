@@ -11,8 +11,8 @@ from Day05_HW import ex1
 
 def get_from_file(infile):
     with open(infile, 'rb') as fromfile:
-        n1 = int.from_bytes(fromfile.read(4))
-        n2 = int.from_bytes(fromfile.read(4))
+        n1 = int.from_bytes(fromfile.read(4), 'big')
+        n2 = int.from_bytes(fromfile.read(4), 'big')
     return n1, n2
 
 
@@ -38,8 +38,8 @@ if __name__ == '__main__':
 
         elif choice == 'c':
             with open(infile, 'wb') as infile:
-                infile.write(a.to_bytes(4, byteorder='big', signed=True))
-                infile.write(b.to_bytes(4, byteorder='big', signed=True))
+                infile.write(a.to_bytes(4, byteorder='big'))
+                infile.write(b.to_bytes(4, byteorder='big'))
 
         elif choice == 'd':
             get_from_file(infile)

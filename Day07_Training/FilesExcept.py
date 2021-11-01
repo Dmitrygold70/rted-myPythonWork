@@ -36,3 +36,17 @@ try:
         b = int.from_bytes(bf.read(4), 'big')
 except PermissionError:
     print("File permissions error")
+print(a, b)
+
+try:
+    with open('file1_text.bin', 'rb') as bf:
+        ch = bf.read()
+        text = ''
+        while ch:
+            text += ch.decode('utf8')
+            ch = bf.read(1)
+        print(text)
+except:
+    print('Unhandled exception')
+
+

@@ -4,7 +4,7 @@ class Person:
         self.last_name = last_name
         self.pid = pid
 
-    def show(self):
+    def __str__(self):
         return f'{self.name:10s}{self.last_name:10s}{self.pid:09d}'
 
     def set_name(self, name):
@@ -24,4 +24,4 @@ if __name__ == '__main__':
     persons.append(Person('Villy', 'Crep', 3))
 
     for p in persons:
-        print(p.show())
+        print(p)

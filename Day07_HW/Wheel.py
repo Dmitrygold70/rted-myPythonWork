@@ -8,7 +8,7 @@ class Wheel:
         self.puncture = puncture
         self.air_percentage = air_percentage
 
-    def show(self):
+    def __str__(self):
         return f'R {self.radius}, air {self.air_percentage}%, isPuncture {self.puncture}'
 
     def in_flat(self, air_percentage):

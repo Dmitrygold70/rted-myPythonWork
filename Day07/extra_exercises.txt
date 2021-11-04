@@ -1,0 +1,11 @@
+(Shekels is in ex12_comparison)
+1) modify Shekels to converts each 100 agorot into shekels automatically
+
+2) add addition (+) to Shekels with other Shekels
+2B) add addtion with ints (treat ints as shekels)
+2C) add radd and iadd as well
+
+3) add multiplication (*) with ints
+4) represent the total of shekels and agorot using only agorot
+   (use get/set for the shekels only and the agorot only values)
+

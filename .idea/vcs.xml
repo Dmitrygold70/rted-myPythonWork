@@ -2,6 +2,9 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+<<<<<<< HEAD
     <mapping directory="$PROJECT_DIR$/rted-myPythonWork" vcs="Git" />
+=======
+>>>>>>> 6e3ce327511eca09468b3ebc278ac96c11ade0a2
   </component>
 </project>
